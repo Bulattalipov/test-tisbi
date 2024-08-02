@@ -1,0 +1,14 @@
+section.section.search
+  .site-container
+    .search__wrapper
+      .search__info
+        h2.search__info-title Блок с поиском
+        .search__info-stars
+          +icon-multi('star')(width="27px" height="27px")
+          +icon-multi('star')(width="27px" height="27px")
+          +icon-multi('star')(width="27px" height="27px")
+      form.search__box(action="")
+        .search__input
+          img.search__input-icon(src="assets/images/search.svg" alt="search")
+          input.search__input-elem(type="text" placeholder="Товары, услуги...")
+        button.btn(type="submit") Поиск

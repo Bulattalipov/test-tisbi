@@ -1,0 +1,28 @@
+-
+  swiperInfo = [
+    {imgUrl: "assets/images/image.jpg", title: "Слайд 1", text: "Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей."},
+    {imgUrl: "https://avatars.mds.yandex.net/i?id=849646411ced29f9059e1065fee86690_l-12525791-images-thumbs&n=13", title: "Слайд 2", text: "Начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей."},
+    {imgUrl: "assets/images/image.jpg", title: "Слайд 3", text: "Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях."},
+    {imgUrl: "assets/images/image.jpg", title: "Слайд 4", text: "При создании генератора мы использовали небезизвестный универсальный код речей. Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а на"},
+    {imgUrl: "assets/images/image.jpg", title: "Слайд 5", text: "Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях."},
+  ]
+
+section.intro.section
+  .site-container
+    .intro__wrapper
+      .swiper.intro__slider
+        .swiper-wrapper.intro__slider-wrapper
+          for item in swiperInfo
+            .swiper-slide.intro__slider-item
+              img.intro__slider-item-img(src=item.imgUrl, alt="")
+              .intro__slider-item-info
+                .intro__slider-item-info-title= item.title
+                p.intro__slider-item-info-text= item.text
+                a.intro__slider-item-info-btn.btn Кнопка
+        .intro__slider-pagination
+        .intro__slider-navigation
+          .intro__slider-navigation-btn.intro__slider-navigation-prev
+            +icon-mono("arrow-swiper")(width="46px" height="46px")
+          .intro__slider-navigation-btn.intro__slider-navigation-next
+            +icon-mono("arrow-swiper")(width="46px" height="46px")
+

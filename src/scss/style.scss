@@ -1,0 +1,23 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+:root {
+  /* typography  */
+  --main-ff: "OpenSans", sans-serif;
+  --second-ff: "OpenSans", sans-serif;
+
+  /* colors */
+  --color-dark: #000;
+  --color-bg: #f3f4f7;
+  --color-white: #fff;
+  --color-grey: #6c6f75;
+  --color-blue: #2f5dd3;
+  --font-body: 400 1.6rem/1.2 var(--main-ff);
+
+  /* etc */
+  --transition: 200ms ease-in;
+}
+
+@import "./helpers/**/*";
+@import "./vendor/**/*";
+@import "./settings/**/*";
+@import "./UI/**/*";
+@import "./pages/**/*";

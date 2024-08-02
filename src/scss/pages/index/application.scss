@@ -1,0 +1,202 @@
+.application {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -32rem;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 194rem;
+    height: 137rem;
+    background-image: url('../images/application-bg.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateX(0);
+    content: '';
+
+    @include mq('custom', max, 1439) {
+      left: -22rem;
+    }
+
+    @include mq(sm) {
+      top: -17rem;
+      left: -6rem;
+      width: 81.5rem;
+      height: 78rem;
+    }
+
+    @include mq('custom', max, 412) {
+      top: -13rem;
+      left: -30rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.4rem;
+    color: #242a38;
+    font-weight: 700;
+    font-size: 3.2rem;
+    font-style: italic;
+
+    @include mq(xs) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 58rem;
+    padding: 48px;
+    background-color: var(--color-white);
+
+    @include mq(md) {
+      width: 100%;
+    }
+
+    @include mq(xs) {
+      padding: 2.4rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -13rem;
+      left: 39rem;
+      z-index: -1;
+      width: 87.8rem;
+      height: 87.8rem;
+      background-image: url('../images/application-img.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include mq(xl) {
+        top: 0;
+        left: 46rem;
+        width: 60rem;
+        height: 60rem;
+      }
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  &__form-input {
+    width: 100%;
+    padding: 1.3rem 2.4rem;
+    border: 0.2rem solid rgba(108, 111, 117, 0.3);
+
+    &:hover,
+    &:active,
+    &:focus {
+      border: 0.2rem solid var(--color-blue);
+    }
+  }
+
+  &__form-checkboxs {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  &__form-select-name {
+    margin-bottom: 0.9rem;
+  }
+
+  &__form-select {
+    .choices__inner {
+      min-height: 4.8rem;
+      padding: 1.05rem 5rem 0.375rem 0.75rem;
+      background-color: var(--color-white);
+      border: 0.2rem solid rgba(108, 111, 117, 0.3);
+
+      &:hover {
+        border: 0.2rem solid var(--color-blue);
+      }
+    }
+
+    .choices__placeholder {
+      color: #242a38;
+      opacity: 1;
+    }
+
+    .choices[data-type*=select-one]::after {
+      right: 2.4rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='10' viewBox='0 0 15 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.88461 8.89897C8.60336 9.17987 8.22211 9.33765 7.82461 9.33765C7.42711 9.33765 7.04586 9.17987 6.76461 8.89897L1.10661 3.24297C0.825345 2.96157 0.667386 2.57997 0.66748 2.18211C0.667527 1.98511 0.706374 1.79005 0.781806 1.60807C0.857237 1.42608 0.967774 1.26073 1.10711 1.12147C1.24644 0.9822 1.41184 0.87174 1.59386 0.796394C1.77588 0.721048 1.97096 0.682292 2.16796 0.682339C2.36496 0.682385 2.56002 0.721234 2.74201 0.796665C2.92399 0.872096 3.08934 0.982633 3.22861 1.12197L7.82461 5.71697L12.4206 1.12097C12.5589 0.977637 12.7244 0.863285 12.9073 0.784587C13.0903 0.705889 13.2871 0.66442 13.4863 0.662595C13.6855 0.660771 13.883 0.698631 14.0674 0.773965C14.2518 0.8493 14.4193 0.960599 14.5602 1.10137C14.7011 1.24214 14.8125 1.40957 14.8881 1.59388C14.9636 1.77818 15.0016 1.97568 15 2.17485C14.9983 2.37402 14.9571 2.57087 14.8785 2.75391C14.8 2.93696 14.6858 3.10253 14.5426 3.24097L8.88461 8.90097L8.88461 8.89897Z' fill='%232F5DD3' /%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+    }
+
+    .choices[data-type*=select-one].is-open::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__break {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(108, 111, 117, 0.3);
+      height: 2px;
+      width: 100%;
+    }
+
+    span {
+      position: relative;
+      z-index: 2;
+      color: #3e4958;
+      background-color: #fff;
+      padding: 0 24px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 2.4rem;
+  }
+
+  &__social-item {
+    width: 100%;
+  }
+
+  &__social-link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 4.8rem;
+    cursor: pointer;
+
+    &--ya {
+      background-color: #fc3f1d;
+    }
+
+    &--vk {
+      background-color: #07f;
+    }
+  }
+}

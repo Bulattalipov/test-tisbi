@@ -1,0 +1,82 @@
+.search {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 23.8rem;
+    padding: 4.8rem;
+    background-color: #242a38;
+
+    @include mq('custom', max, 1023) {
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+
+    @include mq(xs) {
+      gap: 1.6rem;
+      padding: 2.4rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mq('custom', max, 1023) {
+      flex-direction: row;
+    }
+
+    @include mq(xs) {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+  }
+
+  &__info-title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.2rem;
+    font-style: italic;
+
+    @include mq(xs) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__info-stars {
+    display: flex;
+    gap: 2.4rem;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    width: 59.1rem;
+    padding: 2.4rem;
+    background-color: var(--color-white);
+
+    @include mq('custom', max, 1023) {
+      width: 100%;
+    }
+
+    @include mq('custom', max, 411) {
+      padding: 1.2rem;
+    }
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input-icon {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1.6rem;
+  }
+
+  &__input-elem {}
+}

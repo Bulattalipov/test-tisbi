@@ -1,0 +1,150 @@
+.intro {
+  z-index: 1;
+  padding-top: 4.8rem;
+
+  @include mq(xs) {
+    padding-top: 1.6rem;
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__slider-item {
+    display: flex;
+    height: auto;
+    max-height: 48rem;
+    background-color: var(--color-white);
+
+    @include mq(sm) {
+      flex-direction: column;
+      max-height: none;
+    }
+  }
+
+  &__slider-item-img {
+    max-width: 48rem;
+    object-fit: cover;
+
+    @include mq(custom, max, 1023) {
+      max-width: 37rem;
+    }
+
+    @include mq(sm) {
+      max-width: 100%;
+      height: 40rem;
+    }
+  }
+
+  &__slider-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4.8rem;
+
+    @include mq(md) {
+      padding: 2.4rem;
+    }
+  }
+
+  &__slider-item-info-title {
+    margin-bottom: 2.4rem;
+    color: #242a38;
+    font-weight: 700;
+    font-size: 3.2rem;
+    font-style: italic;
+
+    @include mq(xs) {
+      margin-bottom: 1.6rem;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__slider-item-info-text {
+    margin-bottom: 2.4rem;
+    color: #6c6f75;
+    font-size: 1.6rem;
+
+    @include mq(xs) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__slider-item-info-btn {
+    align-self: flex-start;
+  }
+
+  &__slider-navigation {
+    position: absolute;
+    bottom: 2.4rem;
+    left: 2.4rem;
+    z-index: 2;
+    display: inline-flex;
+
+    @include mq(sm) {
+      top: 32.8rem;
+      bottom: auto;
+    }
+  }
+
+  &__slider-navigation-prev,
+  &__slider-navigation-next {
+    width: 4.8rem;
+    height: 4.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-blue);
+    cursor: pointer;
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      fill: #fff;
+    }
+  }
+
+  &__slider-navigation-next {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__slider-navigation-btn.swiper-button-disabled {
+    background-color: #fff;
+
+    svg {
+      fill: var(--color-blue);
+    }
+  }
+
+  &__slider-pagination {
+    position: absolute;
+    bottom: 4rem !important;
+    left: 13.6rem !important;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    width: auto !important;
+
+    @include mq(sm) {
+      top: 34.2rem !important;
+      bottom: auto !important;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin: 0 1rem !important;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0;
+    transform: rotate(45deg);
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 1.7rem;
+    height: 1.7rem;
+    background-color: #fff;
+  }
+}

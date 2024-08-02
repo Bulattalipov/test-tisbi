@@ -1,0 +1,33 @@
+section.section.application
+  .site-container
+    h2.application__title Подача заявки
+    .application__inner
+      .application__box
+        form.application__form(action="")
+          input.application__form-input(type="text" name="name" placeholder="Имя")
+          input.application__form-input(type="email" name="email" placeholder="Почта")
+          .application__form-checkboxs Пол:
+            label.checkbox
+              input.checkbox__input(type="radio" name="gender" value="men")
+              .checkbox__elem
+              .checkbox__text Мужской
+            label.checkbox
+              input.checkbox__input(type="radio" name="gender" value="women")
+              .checkbox__elem
+              .checkbox__text Женский
+          .application__form-select
+            .application__form-select-name Выберите
+            select.application__form-select-elem
+              option(value="текст 1") текст 1
+              option(value="текст 2") текст 2
+              option(value="текст 3") текст 3
+          button.btn(type="submit") Подать заявку
+        .application__break #[span Другой способ]
+        ul.application__social
+          li.application__social-item
+            a.application__social-link.application__social-link--ya
+              img(src="assets/images/ya.png" alt="")
+          li.application__social-item
+            a.application__social-link.application__social-link--vk
+              img(src="assets/images/vk.png" alt="")
+

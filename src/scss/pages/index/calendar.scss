@@ -1,0 +1,189 @@
+.calendar {
+  &__title {
+    margin-bottom: 2.4rem;
+    color: #242a38;
+    font-weight: 700;
+    font-size: 3.2rem;
+    font-style: italic;
+
+    span {
+      display: inline-block;
+      padding: 0.6rem;
+      color: var(--color-white);
+      background-color: #ff6b00;
+    }
+
+    @include mq(xs) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    gap: 4.8rem;
+    justify-content: space-between;
+
+    @include mq('custom', max, 1023) {
+      flex-direction: column;
+    }
+
+    @include mq(xs) {
+      gap: 2.4rem;
+    }
+  }
+
+  &__table {
+    width: 100%;
+  }
+
+  &__table-month {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 4.8rem;
+    margin-bottom: 2.4rem;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+  }
+
+  &__table-month-box {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  &__table-month-box-text {
+    font-size: 1.6rem;
+  }
+
+  &__table-month-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8rem;
+
+    svg {
+      path {
+        color: red;
+        fill: #fff;
+        stroke: red;
+      }
+    }
+  }
+
+  &__table-month-btn-right {
+    transform: rotate(180deg);
+  }
+
+  &__table-days {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.4rem 0.4rem;
+
+    th {
+      color: #6c6f75;
+      text-align: center;
+    }
+
+    td {
+      height: 6.4rem;
+      padding: 2.1rem 0;
+      color: #242a38;
+      text-align: center;
+      background-color: var(--color-white);
+      transition: background-color 0.3s;
+      cursor: pointer;
+      user-select: none;
+
+      &:hover {
+        background-color: rgba(255, 107, 0, 0.2);
+      }
+
+
+      @include mq(xs) {
+        height: 4.8rem;
+        padding: 1.1rem;
+      }
+    }
+
+    .active {
+      color: var(--color-white);
+      background-color: #ff6b00;
+
+      &:hover {
+        background-color: #ff6b00;
+      }
+    }
+
+    .no-active {
+      color: #6c6f75;
+    }
+
+    .today {
+      color: var(--color-white);
+      background-color: var(--color-blue);
+
+      &:hover {
+        background-color: var(--color-blue);
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    max-width: 65.6rem;
+
+    @include mq('custom', max, 1023) {
+      max-width: 100%;
+    }
+  }
+
+  &__list-item {
+    padding: 2.4rem;
+    background-color: var(--color-white);
+  }
+
+  &__list-item-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 2.4rem;
+  }
+
+  &__list-item-tag {
+    padding: 0.4rem 0.8rem;
+    color: var(--color-blue);
+    background-color: rgba(47, 93, 211, 0.1);
+    border-radius: 0.4rem;
+  }
+
+  &__list-item-text {
+    margin-bottom: 2.4rem;
+    color: #242a38;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+
+  &__list-item-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+  }
+
+  &__list-item-btn {
+    display: inline-flex;
+    gap: 1rem;
+    padding: 1.3rem 4.5rem 1.3rem 2.4rem;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    border-radius: 0 0 0 16px;
+    clip-path: polygon(0% 0%, 100% 0, 81% 0, 100% 55%, 100% 100%, 0 100%, 0 100%, 0% 30%);
+
+    &:hover {
+      background-color: #254db3;
+    }
+  }
+
+}

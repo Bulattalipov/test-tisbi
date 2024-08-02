@@ -119,6 +119,10 @@
   }
 
   &__form-select {
+    .choices {
+      z-index: 5;
+    }
+
     .choices__inner {
       min-height: 4.8rem;
       padding: 1.05rem 5rem 0.375rem 0.75rem;

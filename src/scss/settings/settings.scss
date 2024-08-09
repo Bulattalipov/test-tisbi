@@ -12,7 +12,7 @@ html {
   line-height: 1.2;
 
   @include mq('custom', max, 411) {
-    font-size: calc(2px * var(1vw));
+    font-size: calc(var(--index) * 2);
   }
 }
 
